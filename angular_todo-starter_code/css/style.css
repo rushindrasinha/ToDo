@@ -132,6 +132,16 @@ li:hover {
 	background-color: #FF6E40;
 }
 
+.btn-sh {
+	border: 1px solid;
+	background-color: #3498db;
+	color: white;
+	border-radius: 4px;
+	padding: 15px 15px;
+	cursor: pointer;
+
+}
+
 .checkbox {
 	margin: 0 10px;
 	outline: none;

@@ -17,7 +17,11 @@
 		<div class="wrapper" ng-controller="TodosController as todos">
 
 		<header>
-			<h1>You've Got {{ todos.todoList.length }} Things To Do! </h1>
+			<h1>You've Got {{ todos.todoList.length }} <ng-pluralize count="todos.todoList.length"
+                 when="{'0': 'Or No Things',
+                     '1': 'Thing',
+                     'other': 'Things'}">
+</ng-pluralize> To Do! </h1>
 
 			<h4>{{ todos.completedTodos() }} things completed | {{ todos.remainingTodos() }} things remaining</h4>
 		</header>
@@ -34,7 +38,7 @@
 
 
 			<section class='todo-list'>
-				<ul>
+				<ul><!--ng-hide="todo.done"   goes inside the li below to hide the task on completion -->
 					<li ng-repeat='todo in todos.todoList'> 
 					<!--{{$index + 1}})--><input class="checkbox" type="checkbox" ng-model="todo.done">
 					<span ng-class="{done: todo.done}" > {{todo.task}} </span>

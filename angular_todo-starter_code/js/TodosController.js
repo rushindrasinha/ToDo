@@ -33,7 +33,7 @@ Function for Adding ToDo Tasks
 RS==========================*/
 
        function addTodo() {
-       	self.todoList.push({task: self.text, done:false});
+       	self.todoList.unshift({task: self.text, done:false});
        	self.text = null;
 
        }
