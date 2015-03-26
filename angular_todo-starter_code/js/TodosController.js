@@ -5,7 +5,9 @@ angular
     function TodosController(){
         var self = this;
 
-
+/*=================RS
+List of Pre Set Tasks
+RS=================*/
 
        self.todoList = [
            {task: "Build an awesome todo list", done: false},
@@ -15,26 +17,38 @@ angular
            {task: "Take a nap", done: false}
        ];
 
+/*===============RS
+List of Connections
+RS===============*/
+
        self.text; //Bound to Input Box for new todo
        self.addTodo = addTodo;
        self.delTodo = delTodo;
        self.completedTodos = completedTodos;
        self.remainingTodos = remainingTodos;
 
-       function addTodo() {
-       	//var newTodo = {task: self.text, done: false};
-       	//self.todoList.push(newTodo);
-       	       	       		// OR
 
+/*==========================RS
+Function for Adding ToDo Tasks
+RS==========================*/
+
+       function addTodo() {
        	self.todoList.push({task: self.text, done:false});
        	self.text = null;
 
        }
 
+/*========================RS
+Function for Deleting a Task
+RS========================*/
+
        function delTodo($index) {
        	self.todoList.splice($index, 1);
        }
 
+/*=====================================RS
+Counter for Completed and Reminaing Tasks
+RS=====================================*/
 
        function completedTodos(){
         var count = 0;
