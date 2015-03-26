@@ -50,6 +50,25 @@ RS========================*/
 Counter for Completed and Reminaing Tasks
 RS=====================================*/
 
+  // function compRemTodo() {
+  //   var compCount = 0;
+  //   var remCount = 0;
+  //   for (var i=0 ; i < self.todoList.length; i++) {
+  //     if (self.todoList[i].done) {
+  //       compCount++;
+  //       return compCount
+  //     }
+  //     else if (self.todoList[i].done === false) {
+  //       remCount++;
+  //       return remCount
+  //     }
+  //   }
+  // }
+
+
+
+
+
        function completedTodos(){
         var count = 0;
         for(var i = 0; i < self.todoList.length; i++){
