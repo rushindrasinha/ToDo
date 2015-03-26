@@ -6,6 +6,7 @@ angular
         var self = this;
 
 
+
        self.todoList = [
            {task: "Build an awesome todo list", done: false},
            {task: "Get super good at Angular", done: false},
@@ -56,4 +57,3 @@ angular
     	}
 
    	}
-    
